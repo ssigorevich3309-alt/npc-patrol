@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="patrol-panel">
+        <h3>Управление патрулём NPC</h3>
+        <div>
+            <button id="addWaypointBtn" disabled>➕ Добавить точку</button>
+            <button id="clearWaypointsBtn" disabled>🗑️ Очистить</button>
+            <button id="startPatrolBtn" disabled>▶️ Запустить</button>
+            <button id="stopPatrolBtn" disabled>⏹️ Остановить</button>
+        </div>
+        <div class="speed-control">
+            <label>⚡ Скорость: <span id="speedValue">10</span> дюймов/сек</label>
+            <input type="range" id="speedSlider" min="1" max="50" step="1" value="10" disabled>
+        </div>
+        <div class="mode-selector">
+            <label>🔄 Режим:</label>
+            <select id="patrolMode" disabled>
+                <option value="loop">Цикл (по кругу)</option>
+                <option value="pingpong">Туда-обратно</option>
+            </select>
+        </div>
+        <div class="waypoint-list">
+            <p>📍 Точки маршрута:</p>
+            <ul id="waypointList"></ul>
+        </div>
+        <div class="status" id="status">Выделите NPC, чтобы начать</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

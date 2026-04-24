@@ -1,0 +1,69 @@
+body {
+    font-family: system-ui, 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 16px;
+    background: #1e1e2f;
+    color: #eee;
+}
+.patrol-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+button, select, .speed-control input {
+    background: #3a3a4a;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+button:active:not(:disabled) {
+    background: #5a5a7a;
+}
+.speed-control, .mode-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.speed-control input {
+    flex: 1;
+    cursor: pointer;
+}
+select {
+    background: #2a2a3a;
+    border: 1px solid #5a5a7a;
+}
+.waypoint-list ul {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #2a2a3a;
+    padding: 8px;
+    border-radius: 8px;
+    list-style: none;
+    margin: 0;
+}
+.waypoint-list li {
+    font-size: 12px;
+    margin: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.status {
+    font-size: 12px;
+    background: #00000066;
+    padding: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+h3 {
+    margin: 0 0 4px 0;
+}
